@@ -28,38 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.Slave1 = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupInput4 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txt_Slave1Cur8 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txt_Slave1Cur7 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt_Slave1Cur6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txt_Slave1Cur5 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Cur4 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Cur3 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Cur2 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Cur1 = new System.Windows.Forms.TextBox();
             this.groupInput3 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txt_Slave1Vol8 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txt_Slave1Vol7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_Slave1Vol6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_Slave1Vol5 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Vol4 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Vol3 = new System.Windows.Forms.TextBox();
             this.txt_Slave1Vol2 = new System.Windows.Forms.TextBox();
@@ -111,6 +97,7 @@
             this.btn_Slave1ClearAlarm = new System.Windows.Forms.Button();
             this.txt_Slave1Alarm = new System.Windows.Forms.TextBox();
             this.groupConnect1 = new System.Windows.Forms.GroupBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.pic_Slave1Connect = new System.Windows.Forms.PictureBox();
             this.btn_Slave1SetTimeUpdate = new System.Windows.Forms.Button();
             this.btn_Slave1SetRealTime = new System.Windows.Forms.Button();
@@ -120,9 +107,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label25 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.Slave1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupInput4.SuspendLayout();
             this.groupInput3.SuspendLayout();
             this.groupInput2.SuspendLayout();
@@ -145,11 +132,12 @@
             this.tabControl.Location = new System.Drawing.Point(0, 2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(968, 673);
+            this.tabControl.Size = new System.Drawing.Size(966, 640);
             this.tabControl.TabIndex = 0;
             // 
             // Slave1
             // 
+            this.Slave1.Controls.Add(this.pictureBox1);
             this.Slave1.Controls.Add(this.groupInput4);
             this.Slave1.Controls.Add(this.groupInput3);
             this.Slave1.Controls.Add(this.groupInput2);
@@ -163,329 +151,187 @@
             this.Slave1.Location = new System.Drawing.Point(4, 29);
             this.Slave1.Name = "Slave1";
             this.Slave1.Padding = new System.Windows.Forms.Padding(3);
-            this.Slave1.Size = new System.Drawing.Size(960, 640);
+            this.Slave1.Size = new System.Drawing.Size(958, 607);
             this.Slave1.TabIndex = 0;
             this.Slave1.Text = "Slave1";
             this.Slave1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(644, 531);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(295, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupInput4
             // 
-            this.groupInput4.Controls.Add(this.label21);
             this.groupInput4.Controls.Add(this.label9);
-            this.groupInput4.Controls.Add(this.label22);
-            this.groupInput4.Controls.Add(this.txt_Slave1Cur8);
-            this.groupInput4.Controls.Add(this.label23);
             this.groupInput4.Controls.Add(this.label10);
-            this.groupInput4.Controls.Add(this.label24);
-            this.groupInput4.Controls.Add(this.txt_Slave1Cur7);
             this.groupInput4.Controls.Add(this.label11);
-            this.groupInput4.Controls.Add(this.txt_Slave1Cur6);
             this.groupInput4.Controls.Add(this.label12);
-            this.groupInput4.Controls.Add(this.txt_Slave1Cur5);
             this.groupInput4.Controls.Add(this.txt_Slave1Cur4);
             this.groupInput4.Controls.Add(this.txt_Slave1Cur3);
             this.groupInput4.Controls.Add(this.txt_Slave1Cur2);
             this.groupInput4.Controls.Add(this.txt_Slave1Cur1);
-            this.groupInput4.Location = new System.Drawing.Point(501, 458);
+            this.groupInput4.Location = new System.Drawing.Point(502, 413);
             this.groupInput4.Name = "groupInput4";
-            this.groupInput4.Size = new System.Drawing.Size(437, 170);
+            this.groupInput4.Size = new System.Drawing.Size(437, 91);
             this.groupInput4.TabIndex = 21;
             this.groupInput4.TabStop = false;
             this.groupInput4.Text = "Current (mA)";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Location = new System.Drawing.Point(349, 101);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(59, 20);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Input 8";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(348, 41);
+            this.label9.Location = new System.Drawing.Point(348, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 20);
             this.label9.TabIndex = 22;
             this.label9.Text = "Input 4";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Location = new System.Drawing.Point(241, 101);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(59, 20);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "Input 7";
-            // 
-            // txt_Slave1Cur8
-            // 
-            this.txt_Slave1Cur8.Location = new System.Drawing.Point(340, 124);
-            this.txt_Slave1Cur8.Name = "txt_Slave1Cur8";
-            this.txt_Slave1Cur8.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Cur8.TabIndex = 17;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Location = new System.Drawing.Point(129, 101);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(59, 20);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "Input 6";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(242, 41);
+            this.label10.Location = new System.Drawing.Point(242, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 20);
             this.label10.TabIndex = 23;
             this.label10.Text = "Input 3";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Location = new System.Drawing.Point(33, 101);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(59, 20);
-            this.label24.TabIndex = 24;
-            this.label24.Text = "Input 5";
-            // 
-            // txt_Slave1Cur7
-            // 
-            this.txt_Slave1Cur7.Location = new System.Drawing.Point(234, 123);
-            this.txt_Slave1Cur7.Name = "txt_Slave1Cur7";
-            this.txt_Slave1Cur7.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Cur7.TabIndex = 18;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(132, 41);
+            this.label11.Location = new System.Drawing.Point(132, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 20);
             this.label11.TabIndex = 24;
             this.label11.Text = "Input 2";
             // 
-            // txt_Slave1Cur6
-            // 
-            this.txt_Slave1Cur6.Location = new System.Drawing.Point(120, 124);
-            this.txt_Slave1Cur6.Name = "txt_Slave1Cur6";
-            this.txt_Slave1Cur6.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Cur6.TabIndex = 19;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(30, 41);
+            this.label12.Location = new System.Drawing.Point(30, 32);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 20);
             this.label12.TabIndex = 21;
             this.label12.Text = "Input 1";
             // 
-            // txt_Slave1Cur5
-            // 
-            this.txt_Slave1Cur5.Location = new System.Drawing.Point(23, 124);
-            this.txt_Slave1Cur5.Name = "txt_Slave1Cur5";
-            this.txt_Slave1Cur5.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Cur5.TabIndex = 20;
-            // 
             // txt_Slave1Cur4
             // 
-            this.txt_Slave1Cur4.Location = new System.Drawing.Point(340, 64);
+            this.txt_Slave1Cur4.Location = new System.Drawing.Point(340, 55);
             this.txt_Slave1Cur4.Name = "txt_Slave1Cur4";
             this.txt_Slave1Cur4.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Cur4.TabIndex = 16;
             // 
             // txt_Slave1Cur3
             // 
-            this.txt_Slave1Cur3.Location = new System.Drawing.Point(234, 63);
+            this.txt_Slave1Cur3.Location = new System.Drawing.Point(234, 54);
             this.txt_Slave1Cur3.Name = "txt_Slave1Cur3";
             this.txt_Slave1Cur3.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Cur3.TabIndex = 16;
             // 
             // txt_Slave1Cur2
             // 
-            this.txt_Slave1Cur2.Location = new System.Drawing.Point(120, 64);
+            this.txt_Slave1Cur2.Location = new System.Drawing.Point(120, 55);
             this.txt_Slave1Cur2.Name = "txt_Slave1Cur2";
             this.txt_Slave1Cur2.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Cur2.TabIndex = 16;
             // 
             // txt_Slave1Cur1
             // 
-            this.txt_Slave1Cur1.Location = new System.Drawing.Point(23, 64);
+            this.txt_Slave1Cur1.Location = new System.Drawing.Point(23, 55);
             this.txt_Slave1Cur1.Name = "txt_Slave1Cur1";
             this.txt_Slave1Cur1.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Cur1.TabIndex = 16;
             // 
             // groupInput3
             // 
-            this.groupInput3.Controls.Add(this.label17);
             this.groupInput3.Controls.Add(this.label5);
-            this.groupInput3.Controls.Add(this.label18);
-            this.groupInput3.Controls.Add(this.txt_Slave1Vol8);
-            this.groupInput3.Controls.Add(this.label19);
             this.groupInput3.Controls.Add(this.label6);
-            this.groupInput3.Controls.Add(this.label20);
-            this.groupInput3.Controls.Add(this.txt_Slave1Vol7);
             this.groupInput3.Controls.Add(this.label7);
-            this.groupInput3.Controls.Add(this.txt_Slave1Vol6);
             this.groupInput3.Controls.Add(this.label8);
-            this.groupInput3.Controls.Add(this.txt_Slave1Vol5);
             this.groupInput3.Controls.Add(this.txt_Slave1Vol4);
             this.groupInput3.Controls.Add(this.txt_Slave1Vol3);
             this.groupInput3.Controls.Add(this.txt_Slave1Vol2);
             this.groupInput3.Controls.Add(this.txt_Slave1Vol1);
-            this.groupInput3.Location = new System.Drawing.Point(502, 277);
+            this.groupInput3.Location = new System.Drawing.Point(502, 290);
             this.groupInput3.Name = "groupInput3";
-            this.groupInput3.Size = new System.Drawing.Size(437, 170);
+            this.groupInput3.Size = new System.Drawing.Size(437, 95);
             this.groupInput3.TabIndex = 15;
             this.groupInput3.TabStop = false;
             this.groupInput3.Text = "Voltage (V)";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(345, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 20);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "Input 8";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(346, 41);
+            this.label5.Location = new System.Drawing.Point(346, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 17;
             this.label5.Text = "Input 4";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(237, 101);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 20);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "Input 7";
-            // 
-            // txt_Slave1Vol8
-            // 
-            this.txt_Slave1Vol8.Location = new System.Drawing.Point(340, 124);
-            this.txt_Slave1Vol8.Name = "txt_Slave1Vol8";
-            this.txt_Slave1Vol8.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Vol8.TabIndex = 17;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(125, 101);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 20);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Input 6";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(240, 41);
+            this.label6.Location = new System.Drawing.Point(240, 33);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 20);
             this.label6.TabIndex = 18;
             this.label6.Text = "Input 3";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Location = new System.Drawing.Point(29, 101);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 20);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "Input 5";
-            // 
-            // txt_Slave1Vol7
-            // 
-            this.txt_Slave1Vol7.Location = new System.Drawing.Point(234, 123);
-            this.txt_Slave1Vol7.Name = "txt_Slave1Vol7";
-            this.txt_Slave1Vol7.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Vol7.TabIndex = 18;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(130, 41);
+            this.label7.Location = new System.Drawing.Point(130, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(59, 20);
             this.label7.TabIndex = 19;
             this.label7.Text = "Input 2";
             // 
-            // txt_Slave1Vol6
-            // 
-            this.txt_Slave1Vol6.Location = new System.Drawing.Point(120, 124);
-            this.txt_Slave1Vol6.Name = "txt_Slave1Vol6";
-            this.txt_Slave1Vol6.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Vol6.TabIndex = 19;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(28, 41);
+            this.label8.Location = new System.Drawing.Point(28, 33);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 20);
             this.label8.TabIndex = 16;
             this.label8.Text = "Input 1";
             // 
-            // txt_Slave1Vol5
-            // 
-            this.txt_Slave1Vol5.Location = new System.Drawing.Point(23, 124);
-            this.txt_Slave1Vol5.Name = "txt_Slave1Vol5";
-            this.txt_Slave1Vol5.Size = new System.Drawing.Size(74, 26);
-            this.txt_Slave1Vol5.TabIndex = 20;
-            // 
             // txt_Slave1Vol4
             // 
-            this.txt_Slave1Vol4.Location = new System.Drawing.Point(340, 64);
+            this.txt_Slave1Vol4.Location = new System.Drawing.Point(340, 56);
             this.txt_Slave1Vol4.Name = "txt_Slave1Vol4";
             this.txt_Slave1Vol4.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Vol4.TabIndex = 16;
             // 
             // txt_Slave1Vol3
             // 
-            this.txt_Slave1Vol3.Location = new System.Drawing.Point(234, 63);
+            this.txt_Slave1Vol3.Location = new System.Drawing.Point(234, 55);
             this.txt_Slave1Vol3.Name = "txt_Slave1Vol3";
             this.txt_Slave1Vol3.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Vol3.TabIndex = 16;
             // 
             // txt_Slave1Vol2
             // 
-            this.txt_Slave1Vol2.Location = new System.Drawing.Point(120, 64);
+            this.txt_Slave1Vol2.Location = new System.Drawing.Point(120, 56);
             this.txt_Slave1Vol2.Name = "txt_Slave1Vol2";
             this.txt_Slave1Vol2.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Vol2.TabIndex = 16;
             // 
             // txt_Slave1Vol1
             // 
-            this.txt_Slave1Vol1.Location = new System.Drawing.Point(23, 64);
+            this.txt_Slave1Vol1.Location = new System.Drawing.Point(23, 56);
             this.txt_Slave1Vol1.Name = "txt_Slave1Vol1";
             this.txt_Slave1Vol1.Size = new System.Drawing.Size(74, 26);
             this.txt_Slave1Vol1.TabIndex = 16;
@@ -504,9 +350,9 @@
             this.groupInput2.Controls.Add(this.lab_Slave1InputS3);
             this.groupInput2.Controls.Add(this.lab_Slave1InputS2);
             this.groupInput2.Controls.Add(this.lab_Slave1InputS1);
-            this.groupInput2.Location = new System.Drawing.Point(501, 136);
+            this.groupInput2.Location = new System.Drawing.Point(502, 140);
             this.groupInput2.Name = "groupInput2";
-            this.groupInput2.Size = new System.Drawing.Size(437, 135);
+            this.groupInput2.Size = new System.Drawing.Size(437, 138);
             this.groupInput2.TabIndex = 14;
             this.groupInput2.TabStop = false;
             this.groupInput2.Text = "Input Sensor";
@@ -631,7 +477,7 @@
             this.groupInput1.Controls.Add(this.lab_Slave1InputV1);
             this.groupInput1.Location = new System.Drawing.Point(502, 7);
             this.groupInput1.Name = "groupInput1";
-            this.groupInput1.Size = new System.Drawing.Size(437, 110);
+            this.groupInput1.Size = new System.Drawing.Size(437, 123);
             this.groupInput1.TabIndex = 13;
             this.groupInput1.TabStop = false;
             this.groupInput1.Text = "Input 220V";
@@ -640,7 +486,7 @@
             // 
             this.lab_Slave1InputV8.AutoSize = true;
             this.lab_Slave1InputV8.BackColor = System.Drawing.Color.Red;
-            this.lab_Slave1InputV8.Location = new System.Drawing.Point(347, 79);
+            this.lab_Slave1InputV8.Location = new System.Drawing.Point(347, 86);
             this.lab_Slave1InputV8.Name = "lab_Slave1InputV8";
             this.lab_Slave1InputV8.Size = new System.Drawing.Size(59, 20);
             this.lab_Slave1InputV8.TabIndex = 15;
@@ -650,7 +496,7 @@
             // 
             this.lab_Slave1InputV7.AutoSize = true;
             this.lab_Slave1InputV7.BackColor = System.Drawing.Color.Red;
-            this.lab_Slave1InputV7.Location = new System.Drawing.Point(241, 79);
+            this.lab_Slave1InputV7.Location = new System.Drawing.Point(241, 86);
             this.lab_Slave1InputV7.Name = "lab_Slave1InputV7";
             this.lab_Slave1InputV7.Size = new System.Drawing.Size(59, 20);
             this.lab_Slave1InputV7.TabIndex = 15;
@@ -660,7 +506,7 @@
             // 
             this.lab_Slave1InputV6.AutoSize = true;
             this.lab_Slave1InputV6.BackColor = System.Drawing.Color.Red;
-            this.lab_Slave1InputV6.Location = new System.Drawing.Point(131, 79);
+            this.lab_Slave1InputV6.Location = new System.Drawing.Point(131, 86);
             this.lab_Slave1InputV6.Name = "lab_Slave1InputV6";
             this.lab_Slave1InputV6.Size = new System.Drawing.Size(59, 20);
             this.lab_Slave1InputV6.TabIndex = 15;
@@ -670,7 +516,7 @@
             // 
             this.lab_Slave1InputV5.AutoSize = true;
             this.lab_Slave1InputV5.BackColor = System.Drawing.Color.Red;
-            this.lab_Slave1InputV5.Location = new System.Drawing.Point(29, 79);
+            this.lab_Slave1InputV5.Location = new System.Drawing.Point(29, 86);
             this.lab_Slave1InputV5.Name = "lab_Slave1InputV5";
             this.lab_Slave1InputV5.Size = new System.Drawing.Size(59, 20);
             this.lab_Slave1InputV5.TabIndex = 15;
@@ -723,7 +569,7 @@
             this.groupControl3.Controls.Add(this.label4);
             this.groupControl3.Controls.Add(this.txt_Slave1Analog1);
             this.groupControl3.Controls.Add(this.label3);
-            this.groupControl3.Location = new System.Drawing.Point(9, 553);
+            this.groupControl3.Location = new System.Drawing.Point(9, 524);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(471, 72);
             this.groupControl3.TabIndex = 12;
@@ -747,7 +593,7 @@
             this.txt_Slave1Analog2.Name = "txt_Slave1Analog2";
             this.txt_Slave1Analog2.Size = new System.Drawing.Size(100, 26);
             this.txt_Slave1Analog2.TabIndex = 15;
-            this.txt_Slave1Analog2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Slave1Analog2_KeyPress);
+            this.txt_Slave1Analog2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_GetDigit);
             // 
             // label4
             // 
@@ -766,7 +612,7 @@
             this.txt_Slave1Analog1.Size = new System.Drawing.Size(100, 26);
             this.txt_Slave1Analog1.TabIndex = 13;
             this.txt_Slave1Analog1.UseWaitCursor = true;
-            this.txt_Slave1Analog1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Slave1Analog1_KeyPress);
+            this.txt_Slave1Analog1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_GetDigit);
             // 
             // label3
             // 
@@ -784,7 +630,7 @@
             this.groupControl2.Controls.Add(this.btn_Slave1Relay3);
             this.groupControl2.Controls.Add(this.btn_Slave1Relay2);
             this.groupControl2.Controls.Add(this.btn_Slave1Relay1);
-            this.groupControl2.Location = new System.Drawing.Point(9, 444);
+            this.groupControl2.Location = new System.Drawing.Point(10, 429);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(471, 76);
             this.groupControl2.TabIndex = 11;
@@ -845,7 +691,7 @@
             this.groupControl1.Controls.Add(this.btn_Slave1OutPut3);
             this.groupControl1.Controls.Add(this.btn_Slave1OutPut2);
             this.groupControl1.Controls.Add(this.btn_Slave1OutPut1);
-            this.groupControl1.Location = new System.Drawing.Point(6, 299);
+            this.groupControl1.Location = new System.Drawing.Point(6, 290);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(474, 125);
             this.groupControl1.TabIndex = 2;
@@ -945,7 +791,7 @@
             this.groupAlarm1.Controls.Add(this.pic_Slave1Alarm);
             this.groupAlarm1.Controls.Add(this.btn_Slave1ClearAlarm);
             this.groupAlarm1.Controls.Add(this.txt_Slave1Alarm);
-            this.groupAlarm1.Location = new System.Drawing.Point(10, 156);
+            this.groupAlarm1.Location = new System.Drawing.Point(11, 142);
             this.groupAlarm1.Name = "groupAlarm1";
             this.groupAlarm1.Size = new System.Drawing.Size(470, 118);
             this.groupAlarm1.TabIndex = 1;
@@ -995,6 +841,16 @@
             this.groupConnect1.TabStop = false;
             this.groupConnect1.Text = "Connect Parameter";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Location = new System.Drawing.Point(231, 80);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(17, 20);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "s";
+            // 
             // pic_Slave1Connect
             // 
             this.pic_Slave1Connect.BackColor = System.Drawing.Color.Red;
@@ -1031,7 +887,7 @@
             this.txt_Slave1TimeUpdate.Name = "txt_Slave1TimeUpdate";
             this.txt_Slave1TimeUpdate.Size = new System.Drawing.Size(100, 26);
             this.txt_Slave1TimeUpdate.TabIndex = 2;
-            this.txt_Slave1TimeUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Slave1TimeUpdate_KeyPress);
+            this.txt_Slave1TimeUpdate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_GetDigit);
             // 
             // txt_Slave1Id
             // 
@@ -1040,7 +896,7 @@
             this.txt_Slave1Id.Size = new System.Drawing.Size(100, 26);
             this.txt_Slave1Id.TabIndex = 2;
             this.txt_Slave1Id.TextChanged += new System.EventHandler(this.Txt_Slave1Id_TextChanged);
-            this.txt_Slave1Id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Slave1Id_KeyPress);
+            this.txt_Slave1Id.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_GetDigit);
             // 
             // label2
             // 
@@ -1066,7 +922,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(960, 640);
+            this.tabPage2.Size = new System.Drawing.Size(958, 607);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Slave2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1076,32 +932,24 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(960, 640);
+            this.tabPage1.Size = new System.Drawing.Size(958, 607);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Slave3";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(227, 80);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(17, 20);
-            this.label25.TabIndex = 4;
-            this.label25.Text = "s";
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 677);
+            this.ClientSize = new System.Drawing.Size(976, 641);
             this.Controls.Add(this.tabControl);
             this.Name = "main";
             this.Text = "IoT-Soft";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.tabControl.ResumeLayout(false);
             this.Slave1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupInput4.ResumeLayout(false);
             this.groupInput4.PerformLayout();
             this.groupInput3.ResumeLayout(false);
@@ -1184,41 +1032,26 @@
         private System.Windows.Forms.Label lab_Slave1InputV2;
         private System.Windows.Forms.Label lab_Slave1InputV1;
         private System.Windows.Forms.GroupBox groupInput3;
-        private System.Windows.Forms.GroupBox groupInput4;
-        private System.Windows.Forms.TextBox txt_Slave1Cur8;
-        private System.Windows.Forms.TextBox txt_Slave1Cur7;
-        private System.Windows.Forms.TextBox txt_Slave1Cur6;
-        private System.Windows.Forms.TextBox txt_Slave1Cur5;
-        private System.Windows.Forms.TextBox txt_Slave1Cur4;
-        private System.Windows.Forms.TextBox txt_Slave1Cur3;
-        private System.Windows.Forms.TextBox txt_Slave1Cur2;
-        private System.Windows.Forms.TextBox txt_Slave1Cur1;
-        private System.Windows.Forms.TextBox txt_Slave1Vol8;
-        private System.Windows.Forms.TextBox txt_Slave1Vol7;
-        private System.Windows.Forms.TextBox txt_Slave1Vol6;
-        private System.Windows.Forms.TextBox txt_Slave1Vol5;
         private System.Windows.Forms.TextBox txt_Slave1Vol4;
         private System.Windows.Forms.TextBox txt_Slave1Vol3;
         private System.Windows.Forms.TextBox txt_Slave1Vol2;
         private System.Windows.Forms.TextBox txt_Slave1Vol1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btn_Slave1SetAnalog;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.GroupBox groupInput4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txt_Slave1Cur4;
+        private System.Windows.Forms.TextBox txt_Slave1Cur3;
+        private System.Windows.Forms.TextBox txt_Slave1Cur2;
+        private System.Windows.Forms.TextBox txt_Slave1Cur1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

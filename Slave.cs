@@ -9,9 +9,11 @@ namespace IoT_DEMO
     public class Slave
     {
         /* parameter */
-        public int slaveID;
+        private int slaveID;
         public int func_code_handle;
         public int func_code_control;
+        /* */
+        private int response_flag;
         /* Output Control */
         private UInt16 relay = 0;
         private UInt16 coil = 0;
@@ -29,12 +31,6 @@ namespace IoT_DEMO
         {
             if (hex <= 9) return Convert.ToChar(hex + 0x30);
             else return Convert.ToChar(hex + 0x40 - 0x09);
-        }
-
-        private char ascii_to_hex(UInt16 ascii)
-        {
-            if (ascii > 0x39) return Convert.ToChar(ascii - 0x37);
-            else return Convert.ToChar(ascii - 0x30);
         }
 
         private UInt16 calculateCRC(char[] array, int add_start, int size)
@@ -74,9 +70,28 @@ namespace IoT_DEMO
             return hex_to_ascii(Convert.ToChar(slaveID % 16));
         }
 
+        public void SetResponseFlag(UInt16 respoinse_code)
+        {
+            response_flag = respoinse_code;
+        }
+
+        public void ResetResponseFlag()
+        {
+            response_flag = -1;
+        }
+        public int GetResponseFlag()
+        {
+            return response_flag;
+        }
+
         public void SetTimeUpdate(double value)
         {
             time_update = Convert.ToUInt16(value);
+        }
+
+        public void UpdateRelay(UInt16 value)
+        {
+            relay = value;
         }
 
         public void SetRelay(int select)
@@ -115,6 +130,11 @@ namespace IoT_DEMO
                     relay &= 0xF7;
                     break;
             }
+        }
+
+        public void UpdateOutput(UInt16 value)
+        {
+            coil = value;
         }
 
         public void SetOutput(int select)
@@ -179,9 +199,22 @@ namespace IoT_DEMO
             }
         }
 
-        public void SetAnalog(int chanel, double value)
+        public void UpdateAnalog(int channel, UInt16 value)
         {
-            switch(chanel)
+            switch(channel)
+            {
+                case 1:
+                    analog_out_1 = value;
+                    break;
+                case 2:
+                    analog_out_1 = value;
+                    break;
+            }
+        }
+
+        public void SetAnalog(int channel, double value)
+        {
+            switch(channel)
             {
                 case 1:
                     analog_out_1 = Convert.ToUInt16((value / 10) * 0x7FF);
@@ -190,6 +223,83 @@ namespace IoT_DEMO
                     analog_out_2 = Convert.ToUInt16((value / 10) * 0x7FF);
                     break;
             }
+        }
+
+        public void UpdateInputV(UInt16 value)
+        {
+            input_220V = value;
+        }
+
+        public void UpdateInputS(UInt16 value)
+        {
+            input_sensor = value;
+        }
+
+        public void UpdateVoltage(int channel, UInt16 value)
+        {
+            voltage[channel - 1] = value;
+        }
+
+        public void UpdateCurrent(int channel, UInt16 value)
+        {
+            current[channel - 1] = value;
+        }
+
+        public System.Drawing.Color GetRelayState(UInt16 channel)
+        {
+            if ((relay & Convert.ToUInt16(0x01 << (channel - 1))) == Convert.ToUInt16(0x01 << (channel - 1)))
+            {
+                return System.Drawing.Color.Green;
+            }
+            else
+            {
+                return System.Drawing.Color.Red;
+            }
+        }
+        public System.Drawing.Color GetOutputState(UInt16 channel)
+        {
+            if ((coil & Convert.ToUInt16(0x01 << (channel - 1))) == Convert.ToUInt16(0x01 << (channel - 1)))
+            {
+                return System.Drawing.Color.Green;
+            }
+            else
+            {
+                return System.Drawing.Color.Red;
+            }
+        }
+
+        public System.Drawing.Color GetInputV(UInt16 channel)
+        {
+            if ((input_220V & Convert.ToUInt16(0x01 << (channel - 1))) == Convert.ToUInt16(0x01 << (channel - 1)))
+            {
+                return System.Drawing.Color.Green;
+            }
+            else
+            {
+                return System.Drawing.Color.Red;
+            }
+        }
+
+        public System.Drawing.Color GetInputS(UInt16 channel)
+        {
+            if ((input_sensor & Convert.ToUInt16(0x01 << (channel - 1))) == Convert.ToUInt16(0x01 << (channel - 1)))
+            {
+                return System.Drawing.Color.Green;
+            }
+            else
+            {
+                return System.Drawing.Color.Red;
+            }
+        }
+
+        public UInt16 GetVoltage(UInt16 channel)
+        {
+            return voltage[channel - 1];
+        }
+
+        public UInt16 GetCurrent(UInt16 channel)
+        {
+            return current[channel - 1];
         }
 
         public String SetRealTime()
