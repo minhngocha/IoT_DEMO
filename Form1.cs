@@ -93,6 +93,7 @@ namespace IoT_DEMO
                 {
                     client.Close();
                 }
+                Thread.Sleep(500);
             }
         }
         #endregion
@@ -210,16 +211,16 @@ namespace IoT_DEMO
                                 this.lab_Slave1InputS4.BackColor = IOT_Slave1.GetInputS(4);
 
                                 // update voltage value
-                                this.txt_Slave1Vol1.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol1.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(1) - 1986) / 1986) * 10); }));
-                                this.txt_Slave1Vol2.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol2.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(2) - 1986) / 1986) * 10); }));
-                                this.txt_Slave1Vol3.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol3.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(3) - 1986) / 1986) * 10); }));
-                                this.txt_Slave1Vol4.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol4.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(4) - 1986) / 1986) * 10); }));
+                                this.txt_Slave1Vol1.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol1.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(1) - 1952) / 1952) * 10); }));
+                                this.txt_Slave1Vol2.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol2.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(2) - 1952) / 1952) * 10); }));
+                                this.txt_Slave1Vol3.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol3.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(3) - 1952) / 1952) * 10); }));
+                                this.txt_Slave1Vol4.Invoke(new MethodInvoker(delegate () { txt_Slave1Vol4.Text = String.Format("{0:0.##}", ((IOT_Slave1.GetVoltage(4) - 1952) / 1952) * 10); }));
 
                                 // update curent value
                                 this.txt_Slave1Cur1.Invoke(new MethodInvoker(delegate () { txt_Slave1Cur1.Text = String.Format("{0:0.##}", (IOT_Slave1.GetCurrent(1) / 4096) * 20); }));
                                 this.txt_Slave1Cur2.Invoke(new MethodInvoker(delegate () { txt_Slave1Cur2.Text = String.Format("{0:0.##}", (IOT_Slave1.GetCurrent(2) / 4096) * 20); }));
                                 this.txt_Slave1Cur3.Invoke(new MethodInvoker(delegate () { txt_Slave1Cur3.Text = String.Format("{0:0.##}", (IOT_Slave1.GetCurrent(3) / 4096) * 20); }));
-                                this.txt_Slave1Cur4.Invoke(new MethodInvoker(delegate () { txt_Slave1Cur4.Text = String.Format("{0:0.##}", (IOT_Slave1.GetCurrent(7) / 4096) * 20); }));
+                                this.txt_Slave1Cur4.Invoke(new MethodInvoker(delegate () { txt_Slave1Cur4.Text = String.Format("{0:0.##}", (IOT_Slave1.GetCurrent(4) / 4096) * 20); }));
                             }
                         }
                     }

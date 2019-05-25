@@ -217,10 +217,10 @@ namespace IoT_DEMO
             switch(channel)
             {
                 case 1:
-                    analog_out_1 = Convert.ToUInt16((value / 10) * 0x7FF);
+                    analog_out_1 = Convert.ToUInt16((value / 10) * 0xFFF);
                     break;
                 case 2:
-                    analog_out_2 = Convert.ToUInt16((value / 10) * 0x7FF);
+                    analog_out_2 = Convert.ToUInt16((value / 10) * 0xFFF);
                     break;
             }
         }
@@ -256,6 +256,7 @@ namespace IoT_DEMO
                 return System.Drawing.Color.Red;
             }
         }
+
         public System.Drawing.Color GetOutputState(UInt16 channel)
         {
             if ((coil & Convert.ToUInt16(0x01 << (channel - 1))) == Convert.ToUInt16(0x01 << (channel - 1)))

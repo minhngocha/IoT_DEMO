@@ -7,4 +7,3 @@ D:\Minhneo\Visual\IoT_DEMO\obj\Debug\IoT_DEMO.csproj.GenerateResource.cache
 D:\Minhneo\Visual\IoT_DEMO\obj\Debug\IoT_DEMO.csproj.CoreCompileInputs.cache
 D:\Minhneo\Visual\IoT_DEMO\obj\Debug\IoT_DEMO.exe
 D:\Minhneo\Visual\IoT_DEMO\obj\Debug\IoT_DEMO.pdb
-D:\Minhneo\Visual\IoT_DEMO\obj\Debug\IoT_DEMO.csprojAssemblyReference.cache
